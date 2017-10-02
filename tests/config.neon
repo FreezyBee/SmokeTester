@@ -1,0 +1,7 @@
+application:
+    mapping:
+        *: FreezyBee\SmokeTester\Tests\AcmeApp\*Presenter
+
+routing:
+    routes:
+        '<presenter=Default>/<action=default>': []

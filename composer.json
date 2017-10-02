@@ -1,0 +1,39 @@
+{
+  "name": "freezy-bee/smoke-tester",
+  "license": [
+    "MIT"
+  ],
+  "type": "library",
+  "description": "Nette smoke",
+  "keywords": [
+    "nette",
+    "smoke test"
+  ],
+  "authors": [
+    {
+      "name": "Jakub Janata",
+      "email": "jakubjanata@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.1",
+    "nette/application": "~2.4",
+    "nette/bootstrap": "~2.4",
+    "nette/security": "~2.4",
+    "nette/tester": "~2.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "~0.8",
+    "squizlabs/php_codesniffer": "~3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "FreezyBee\\SmokeTester\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "FreezyBee\\SmokeTester\\Tests\\": "tests/"
+    }
+  }
+}
