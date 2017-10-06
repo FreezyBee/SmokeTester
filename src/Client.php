@@ -163,10 +163,6 @@ class Client
             $application->catchExceptions = $this->config['catchExceptions'];
             $application->run();
         } catch (\Throwable $exception) {
-            if ($exception instanceof BadRequestException) {
-                throw new BadRequestException($this->httpRequest->getUrl(), $exception->getCode(), $exception);
-            }
-
             throw $exception;
         } finally {
             $this->httpResponse->setContent(ob_get_clean());
