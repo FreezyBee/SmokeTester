@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace FreezyBee\SmokeTester\Http;
 
+use Nette\Utils\Json;
+
 /**
  * @author Jakub Janata <jakubjanata@gmail.com>
  */
@@ -42,6 +44,14 @@ class Response extends \Nette\Http\Response
     }
 
     /**
+     * @return array
+     */
+    public function getContentJsonArray(): array
+    {
+        return Json::decode($this->content, Json::FORCE_ARRAY);
+    }
+
+    /**
      * @param string $content
      */
     public function setContent(string $content): void
@@ -55,7 +65,7 @@ class Response extends \Nette\Http\Response
     public function isSuccessful(): bool
     {
         $code = $this->getCode();
-        return $code >= 200 && $code < 400;
+        return $code >= 200 && $code < 300;
     }
 
     /**
