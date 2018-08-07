@@ -165,7 +165,7 @@ class Client
         } catch (\Throwable $exception) {
             throw $exception;
         } finally {
-            $this->httpResponse->setContent(ob_get_clean());
+            $this->httpResponse->setContent(ob_get_clean() ?: '');
         }
 
         return $this->httpResponse;

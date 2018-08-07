@@ -17,9 +17,7 @@ class Response extends \Nette\Http\Response
     private $headers = [];
 
     /**
-     * @param $name
-     * @param $value
-     * @return self
+     * {@inheritdoc}
      */
     public function setHeader($name, $value): self
     {
@@ -28,7 +26,7 @@ class Response extends \Nette\Http\Response
     }
 
     /**
-     * @return array
+     * {@inheritdoc}
      */
     public function getHeaders(): array
     {
