@@ -30,6 +30,6 @@ class DefaultPresenter extends Presenter
 
     public function actionException()
     {
-        throw new BadRequestException;
+        throw new BadRequestException();
     }
 }

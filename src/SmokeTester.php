@@ -57,7 +57,7 @@ class SmokeTester
             throw new RuntimeException('Please specify $tempDir in setup or by first argument');
         }
 
-        $configurator = new Configurator;
+        $configurator = new Configurator();
         $configurator->setTempDirectory($tempDir);
 
         if (is_callable($configuratorCallback)) {
