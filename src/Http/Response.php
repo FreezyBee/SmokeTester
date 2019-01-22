@@ -16,6 +16,12 @@ class Response extends \Nette\Http\Response
     /** @var array */
     private $headers = [];
 
+    public function __construct()
+    {
+        parent::__construct();
+        $this->setCode(self::S200_OK);
+    }
+
     /**
      * {@inheritdoc}
      */

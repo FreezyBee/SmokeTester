@@ -151,7 +151,7 @@ class Session extends \Nette\Http\Session
     /**
      * {@inheritdoc}
      */
-    public function setCookieParameters($path, $domain = null, $secure = null): self
+    public function setCookieParameters($path, $domain = null, $secure = null, $samesite = null): self
     {
         return $this;
     }
